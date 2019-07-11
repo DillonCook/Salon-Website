@@ -495,10 +495,6 @@ main {
           animation: none;
   -webkit-transform: scale(1.5);
           transform: scale(1.5);
-  -webkit-transition: -webkit-transform .4s linear;
-  transition: -webkit-transform .4s linear;
-  transition: transform .4s linear;
-  transition: transform .4s linear, -webkit-transform .4s linear;
   cursor: pointer;
 }
 

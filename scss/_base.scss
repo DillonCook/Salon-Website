@@ -49,6 +49,7 @@ main {
     padding-bottom: 50px;
 
 }
+
 // Animation of bouncing arrow
 @keyframes swing
 {
@@ -102,7 +103,6 @@ main {
         &:hover {
             animation: none;
             transform: scale(1.5);
-            transition: transform .4s linear;
             cursor: pointer;
         }
     }
