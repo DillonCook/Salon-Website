@@ -6,74 +6,66 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Hair by Katie Cook</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Open+Sans+Condensed:300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="scss/index.css">
 </head>
 <body>
     <header>
-        <nav class="navbar flex-column navbar-expand-lg navbar-light bg-light fixed-top">
-            <a class="navbar-brand mx-auto m-1 display-1 hair-by-katie" href="#">Hair by Katie Cook</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link current-page" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="gallery.html">Gallery</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#estimates">Estimates</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Hours</a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="#"><strong>Tuesday</strong> &nbsp; &nbsp; &nbsp; 10am - 5pm <br> <strong>Wednesday</strong> 10am - 5pm <br> <strong>Friday</strong> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 10am - 5pm</a>
-                        <a class="dropdown-item" href="#"><strong>Saturday</strong> &nbsp; &nbsp;  10am - 6pm</a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
+        <nav>
+            <input type="checkbox" id="nav-checkbox">
+            <label for="nav-checkbox">
+            <h1>Hair by Katie Cook</h1>
+            <ul class="menu nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li> 
+                <li><a href="#contact">Contact</a></li> 
+                <li><a href="#estimates">Quotes</a></li> 
+                <li><a href="#hours">Hours</a></li> 
+            </ul>
+            <span class="toggle">☰</span>
+            </label>
         </nav>
     </header>
 
     <main>
         <div class="profile-picture">
             <img class="katie-profile" src="images/katie-profile.JPG" alt="picture of Katie Cook">
+            <i class="fa fa-angle-double-down"></i>
         </div>
 
-        <a href="gallery.html" class="gallery"><h1 class="display-4">Check Out My Full Gallery!</h1></a>
-
+        <a href="gallery.html" class="gallery"><h1>View More Pictures</h1></a>
         <div class="snapwidget">
             <!-- SnapWidget -->
-            <iframe src="https://snapwidget.com/embed/710914" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:60%; "></iframe>
+            <iframe src="https://snapwidget.com/embed/710914" class="snapwidget-widget snap" allowtransparency="true" frameborder="0" scrolling="no"></iframe>
         </div>
 
         <div class="div-cards">
-            <h1 class="mx-auto display-3">About Me</h1>
+            <h1 class="">About Me</h1>
             <p>I'm Katie, When I was about 8 years old I decided I was going to be a hairstylist. By the time I was 12, I was cutting the hair of everyone in my family.  While I've been behind the chair for several years now, I never want to stop learning and growing. </p>
             <p>I'm a Master Designer at Salon by InStyle inside JcPenney. I work with a variety of hair types. I specialize in Highlights and Balayage.</p>
         </div>
 
         <div class="div-cards">
-                <a id="contact"><h1 class="mx-auto display-3">Contact & Booking</h1></a>
+                <h1 id="contact">Contact</h1>
                 <p>You may reach me on Facebook, Instagram, or by email.</p>
         </div>
 
         <div class="div-cards">
-                <a id="estimates"><h1 class="mx-auto display-3">Estimates</h1></a>
+                <h1 id="estimates">Quoting</h1>
                 <p>Here are my estimates for different services:</p>
                 <ul>
                     <li>thing 1</li>
                     <li>thing 2</li>
                     <li>thing 3</li>
                 </ul>
+        </div>
+
+        <div class="div-cards">
+                <h1 id="hours">Hours</h1>
+                <p><strong>Tuesday</strong> 10am - 5pm</p>
+                <p><strong>Wednesday</strong> 10am - 5pm</p>
+                <p><strong>Friday</strong> 10am - 5pm</p>
+                <p><strong>Saturday</strong> 10am - 6pm</p>
         </div>
     </main>
 
@@ -86,21 +78,19 @@
         <p class="margin-bottom-10">813-751-7191</p>
         <a class="call-me-button icon-png" href="tel:+8137517193"> <img src="images/icons8_phone_96px.png" alt="icon of a phone" width="40px"></a>
 
-        <p class="margin-bottom-10">Find me on Social Media!</p>
+        <p class="margin-bottom-10">Contact me on Social Media or by email!</p>
         <div>
             <a class="icon-png" href="https://www.facebook.com/KC-Hairdesign-177569139678961/?eid=ARCS8FNt_TvB5Sr5QvXgdYeKc9QfCZhu2_hZzal4O6_jHIfjPtv9nBBKI9hWHaFYfUrQNiUB6HrgVHHY&timeline_context_item_type=intro_card_work&timeline_context_item_source=100011655079399&fref=tag" target="_blank"><img src="images/icons8_facebook_96px_1.png" alt="facebook icon" width="50px"></a>
             <a class="icon-png" href="https://www.instagram.com/kchairdesigns/" target="_blank"><img src="images/icons8_instagram_new_96px.png" alt="instagram icon" width="50px"></a>
             <a class="icon-png" href="mailto:karore2015@gmail.com" target="_blank"><img src="images/icons8_gmail_96px.png" alt="email icon" width="50px"></a>
         </div>
         <div id="footer-notes">
-            <p>Hair by Katie Cook</p>
-            <p>Website designed and created by her loving husband</p>
+            <p>&copy Hair by Katie Cook</p>
+            <p>Website created by her loving husband</p>
         </div>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://snapwidget.com/js/snapwidget.js"></script>
     <script src="app.js"></script>
 </body>
