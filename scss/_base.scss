@@ -115,7 +115,7 @@ nav {
         justify-content: space-around;
         align-items: center;
         height: 0px;
-        transition: height .3s linear;
+        transition: height .4s ease-out;
     }
     .menu li {
         display: flex;

@@ -507,8 +507,8 @@ nav a {
         -ms-flex-align: center;
             align-items: center;
     height: 0px;
-    -webkit-transition: height .3s linear;
-    transition: height .3s linear;
+    -webkit-transition: height .4s ease-out;
+    transition: height .4s ease-out;
   }
   .menu li {
     display: -webkit-box;
