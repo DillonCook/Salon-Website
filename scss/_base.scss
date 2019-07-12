@@ -155,10 +155,11 @@ nav {
 
 #arrowWrapper {
     font-size: 2.6em;
-    position: relative;
+    position: relative;     // Positions bouncing arrow into .section-1 so it responsively adjusts to screen sizes
     top: -80px;
     left: center;
     i {
+        padding-top: 20px;
         color: white;
         animation: swing 4s infinite;
         &:hover {

@@ -559,6 +559,7 @@ nav a {
 }
 
 #arrowWrapper i {
+  padding-top: 20px;
   color: white;
   -webkit-animation: swing 4s infinite;
           animation: swing 4s infinite;
