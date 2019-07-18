@@ -1,6 +1,47 @@
 %flex {
     display: flex;
     flex-wrap: nowrap;
-    flex-direction: column;
-    
+    flex-direction: column; 
+}
+
+// red to pink font change
+@keyframes color-change {
+    0% { color: rgb(255, 17, 29); }
+    100% { color: $pink; }
+}
+
+// Animation of bouncing arrow
+@keyframes swing
+{
+    15%
+    {
+        transform: translateY(10px);
+    }
+    30%
+    {
+        transform: translateY(-20px);
+    }
+    50%
+    {
+        transform: translateY(6px);
+    }
+    65%
+    {
+        transform: translateY(-6px);
+    }
+    80%
+    {
+        transform: translateY(3px);
+    }
+    100%
+    {
+        transform: translateY(0);
+    }
+}
+
+// Media Query
+@mixin large-screens {
+    @media(min-width: 850px) {
+        @content;
+    }
 }
