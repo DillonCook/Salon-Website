@@ -4,6 +4,14 @@
     flex-direction: column; 
 }
 
+%bouncing-arrow {
+    i {
+        padding-top: 20px;
+        color: white;
+        animation: swing 4s infinite;
+    }
+}
+
 // red to pink font change
 @keyframes color-change {
     0% { color: rgb(255, 17, 29); }
@@ -40,8 +48,14 @@
 }
 
 // Media Query
-@mixin large-screens {
+@mixin lg-screens {
     @media(min-width: 850px) {
+        @content;
+    }
+}
+
+@mixin xlg-screens {
+    @media(min-width: 1024px) {
         @content;
     }
 }

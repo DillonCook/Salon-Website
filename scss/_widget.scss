@@ -1,0 +1,25 @@
+//Snapwidget styles --------------------------------------
+iframe {
+    border-radius: 2px;
+    box-shadow: 0 0 10px -5px black;
+}
+
+.snapwidget {
+    width: 100%;
+    text-align: center;
+}
+
+.snap {
+    border: none; 
+    overflow: hidden; 
+    width: 90%; 
+    max-height: 300px; //percentages do not work for max-height. Pixel unit only
+    @include lg-screens {
+        max-width: 75%;
+        max-height: 80vh;
+    }
+}
+
+.snapwidget-gallery {
+    margin-top: 5px;
+}
