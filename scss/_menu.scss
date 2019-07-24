@@ -4,6 +4,7 @@ nav {
     margin: 0 auto;
     width: 100%;
     background-color: $background-pink;
+    position: absolute; // testing functionality to position drop-down over other elements
     .current {
         animation: color-change 3s infinite alternate;
         font-size: 3em;
@@ -42,7 +43,7 @@ nav {
     align-content: center;
     font-size: 1.2em;
     padding: 10px 15px;
-    transition: color .4s ease, font-size .3s ease;
+    transition: color .6s ease, font-size .4s ease;
     &:hover {
         color: rgb(231, 36, 36);
         font-size: 2em;

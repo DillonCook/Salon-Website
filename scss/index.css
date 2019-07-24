@@ -436,6 +436,7 @@ nav {
   margin: 0 auto;
   width: 100%;
   background-color: #fff1f3;
+  position: absolute;
 }
 
 nav .current {
@@ -487,8 +488,8 @@ nav a {
       align-content: center;
   font-size: 1.2em;
   padding: 10px 15px;
-  -webkit-transition: color .4s ease, font-size .3s ease;
-  transition: color .4s ease, font-size .3s ease;
+  -webkit-transition: color .6s ease, font-size .4s ease;
+  transition: color .6s ease, font-size .4s ease;
 }
 
 .menu li a:hover {
@@ -640,7 +641,7 @@ body {
 }
 
 .section-1 {
-  height: 93vh;
+  height: 100%;
   width: 100%;
   text-align: center;
   background-image: url("../images/salon.jpg");
@@ -651,6 +652,12 @@ body {
   .section-1 {
     height: 100vh;
   }
+}
+
+.section-2 {
+  height: 100%;
+  width: 100%;
+  text-align: center;
 }
 
 #arrow-wrapper {
@@ -677,10 +684,15 @@ i:hover {
 .profile-picture .katie-profile {
   height: 40%;
   border-radius: 50%;
-  margin-top: 100px;
+  margin-top: 300px;
   border: 3px white solid;
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
+}
+
+.profile-picture h2 {
+  color: #fa6d84;
+  font-size: 4em;
+  padding-top: 15px;
+  text-shadow: white 0 0 3px;
 }
 
 h1,
@@ -715,8 +727,12 @@ main {
 }
 
 .gallery {
-  padding-top: 100px;
   text-decoration: none;
+}
+
+.gallery h1 {
+  margin-top: 0;
+  padding-top: 30px;
 }
 
 .gallery h1:hover {

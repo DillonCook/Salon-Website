@@ -21,7 +21,7 @@ body {
 }
 
 .section-1 {
-    height: 93vh;
+    height: 100%; // testing functionality. replaced 93vh
     width: 100%;
     text-align: center;
     background-image: url("../images/salon.jpg");
@@ -31,10 +31,16 @@ body {
     }
 }
 
+.section-2 {
+    height: 100%; // testing functionality. replaced 93vh
+    width: 100%;
+    text-align: center;
+}
+
 // bouncing arrows with Javascript
 #arrow-wrapper {
     font-size: 2.5em;
-    position: relative;     // Positions bouncing arrow into .section-1 so it responsively adjusts to screen sizes
+    position: relative;     // Positions bouncing arrow into .section-1 (landing section) so it responsively adjusts to screen sizes
     top: -80px;
     left: center;
     @extend %bouncing-arrow;
@@ -57,9 +63,16 @@ i:hover {
     .katie-profile {
         height: 40%;
         border-radius: 50%;
-        margin-top: 100px;
+        // box-shadow: 0 0 10px 0 black;
+        margin-top: 300px;
         border: 3px white solid;
-        transition: all .3s ease-in-out;
+        // transition: all .3s ease-in-out;
+    }
+    h2 {
+        color: $pink;
+        font-size: 4em;
+        padding-top: 15px;
+        text-shadow: white 0 0 3px;
     }
 }
 
@@ -95,8 +108,11 @@ main {
 }
 
 .gallery {
-    padding-top: 100px;
     text-decoration: none;
+    h1 {
+        margin-top: 0;
+        padding-top: 30px;
+    }
     h1:hover {
         color: rgb(236, 68, 96);
     }

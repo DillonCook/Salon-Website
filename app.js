@@ -1,7 +1,7 @@
 // Scroll down to next section on arrow click
 $('.fa-angle-double-down').click(() => {
     $('html, body').animate({
-        scrollTop: $('.gallery').offset().top
+        scrollTop: $('.section-2').offset().top
     }, 400);
     
 });
