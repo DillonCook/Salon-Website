@@ -16,6 +16,12 @@ body {
     margin-bottom: 15px;
 }
 
+.sticky {
+    position: fixed;
+    top: 0;
+}
+
+
 .bold {
     font-weight: bold;
 }
@@ -24,25 +30,53 @@ body {
     height: 100%; // testing functionality. replaced 93vh
     width: 100%;
     text-align: center;
-    background-image: url("../images/salon.jpg");
+    background-image: url("../images/header-image.jpg");
     background-size: cover;
+    background-position: center;
     @include lg-screens {
         height: 100vh;
     }
 }
 
-.section-2 {
-    height: 100%; // testing functionality. replaced 93vh
+.section-2,
+.section-3 {
+    height: 100vh; // testing functionality.
     width: 100%;
     text-align: center;
+}
+
+.section-2 {
+    @include lg-screens {
+        display: flex;
+        flex-direction: row;
+        width: 90%;
+        div {
+            h1 {
+                padding-top: 0;
+                margin-top: 60px;
+            }
+            .snapwidget {
+                width: 100%;
+                height: 100%;
+                iframe {
+                    width: 100%;
+                }
+            }
+            margin-top: 0px;
+            width: 40%;
+            padding-top: 0px;
+        }
+
+
+    }
 }
 
 // bouncing arrows with Javascript
 #arrow-wrapper {
     font-size: 2.5em;
-    position: relative;     // Positions bouncing arrow into .section-1 (landing section) so it responsively adjusts to screen sizes
-    top: -80px;
-    left: center;
+    position: absolute;
+    bottom: 2%; 
+    left: 50%;
     @extend %bouncing-arrow;
 }
 
@@ -70,8 +104,8 @@ i:hover {
     }
     h2 {
         color: $pink;
-        font-size: 4em;
-        padding-top: 15px;
+        font-size: 2em;
+        padding-top: 5%;
         text-shadow: white 0 0 3px;
     }
 }
@@ -179,6 +213,4 @@ footer {
         padding: 5px 0;
     }
 }
-
-
 

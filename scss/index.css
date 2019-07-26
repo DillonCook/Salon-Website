@@ -603,14 +603,13 @@ iframe {
 .snap {
   border: none;
   overflow: hidden;
-  width: 90%;
-  max-height: 300px;
+  height: 60%;
 }
 
 @media (min-width: 850px) {
   .snap {
-    max-width: 75%;
-    max-height: 80vh;
+    width: 45%;
+    max-height: 500px;
   }
 }
 
@@ -636,6 +635,11 @@ body {
   margin-bottom: 15px;
 }
 
+.sticky {
+  position: fixed;
+  top: 0;
+}
+
 .bold {
   font-weight: bold;
 }
@@ -644,8 +648,9 @@ body {
   height: 100%;
   width: 100%;
   text-align: center;
-  background-image: url("../images/salon.jpg");
+  background-image: url("../images/header-image.jpg");
   background-size: cover;
+  background-position: center;
 }
 
 @media (min-width: 850px) {
@@ -654,17 +659,47 @@ body {
   }
 }
 
-.section-2 {
-  height: 100%;
+.section-2,
+.section-3 {
+  height: 100vh;
   width: 100%;
   text-align: center;
 }
 
+@media (min-width: 850px) {
+  .section-2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 90%;
+  }
+  .section-2 div {
+    margin-top: 0px;
+    width: 40%;
+    padding-top: 0px;
+  }
+  .section-2 div h1 {
+    padding-top: 0;
+    margin-top: 60px;
+  }
+  .section-2 div .snapwidget {
+    width: 100%;
+    height: 100%;
+  }
+  .section-2 div .snapwidget iframe {
+    width: 100%;
+  }
+}
+
 #arrow-wrapper {
   font-size: 2.5em;
-  position: relative;
-  top: -80px;
-  left: center;
+  position: absolute;
+  bottom: 2%;
+  left: 50%;
 }
 
 i:hover {
@@ -690,8 +725,8 @@ i:hover {
 
 .profile-picture h2 {
   color: #fa6d84;
-  font-size: 4em;
-  padding-top: 15px;
+  font-size: 2em;
+  padding-top: 5%;
   text-shadow: white 0 0 3px;
 }
 

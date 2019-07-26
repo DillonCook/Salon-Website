@@ -7,16 +7,16 @@ iframe {
 .snapwidget {
     width: 100%;
     text-align: center;
+    
 }
 
 .snap {
     border: none; 
     overflow: hidden; 
-    width: 90%; 
-    max-height: 300px; //percentages do not work for max-height. Pixel unit only
+    height: 60%;
     @include lg-screens {
-        max-width: 75%;
-        max-height: 80vh;
+        width: 45%;
+        max-height: 500px;
     }
 }
 
