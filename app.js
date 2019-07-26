@@ -1,9 +1,26 @@
 // Scroll down to next section on arrow click
-$('.fa-angle-double-down').click(() => {
+$('.first-arrow').click(() => {
     $('html, body').animate({
         scrollTop: $('.section-2').offset().top
     }, 400);
-    
+});
+
+$('.second-arrow').click(() => {
+  $('html, body').animate({
+      scrollTop: $('.section-3').offset().top
+  }, 400);
+});
+
+$('.third-arrow').click(() => {
+  $('html, body').animate({
+      scrollTop: $('.section-4').offset().top
+  }, 400);
+});
+
+$('.fourth-arrow').click(() => {
+  $('html, body').animate({
+      scrollTop: $('#hours').offset().top
+  }, 400);
 });
 
 // Scroll up to menu

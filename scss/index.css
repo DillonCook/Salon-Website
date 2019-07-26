@@ -353,9 +353,8 @@ footer {
           flex-direction: column;
 }
 
-#arrow-wrapper i, #footer-arrow i {
+.first-arrow i, .second-arrow i, .third-arrow i, .fourth-arrow i, footer #footer-arrow i {
   padding-top: 20px;
-  color: white;
   -webkit-animation: swing 4s infinite;
           animation: swing 4s infinite;
 }
@@ -604,7 +603,7 @@ iframe {
 .snap {
   border: none;
   overflow: hidden;
-  height: 60%;
+  width: 50%;
 }
 
 @media (min-width: 850px) {
@@ -694,9 +693,10 @@ main {
 .section-2,
 .section-3,
 .section-4 {
-  height: 93vh;
+  height: 100vh;
   width: 100%;
   text-align: center;
+  position: relative;
 }
 
 @media (min-width: 850px) {
@@ -705,6 +705,14 @@ main {
   .section-4 {
     height: 100vh;
   }
+}
+
+.section-2 p {
+  width: 85%;
+}
+
+.section-2 h1 {
+  margin: 10px 0 15px;
 }
 
 @media (min-width: 850px) {
@@ -724,8 +732,8 @@ main {
     padding-top: 0px;
   }
   .section-2 div h1 {
-    padding-top: 0;
-    margin-top: 60px;
+    padding-top: 100px;
+    margin-top: 0;
   }
   .section-2 div .snapwidget {
     width: 100%;
@@ -736,19 +744,48 @@ main {
   }
 }
 
-#arrow-wrapper {
+.first-arrow {
   font-size: 2.5em;
   position: absolute;
   bottom: 2%;
   left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  color: white;
+}
+
+.second-arrow {
+  color: black;
+  font-size: 2.5em;
+  position: absolute;
+  bottom: 2%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.third-arrow {
+  color: black;
+  font-size: 2.5em;
+  position: absolute;
+  bottom: 2%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.fourth-arrow {
+  color: black;
+  font-size: 2.5em;
+  position: absolute;
+  bottom: 2%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 i:hover {
   cursor: pointer;
-}
-
-#footer-arrow {
-  font-size: 2.5em;
 }
 
 .profile-picture {
@@ -789,12 +826,18 @@ i:hover {
 }
 
 .div-cards {
-  margin-top: 50px;
-  width: 90%;
+  width: 100%;
 }
 
 .div-cards li {
   list-style-type: none;
+}
+
+#contact,
+#estimates,
+#hours {
+  margin-top: 0;
+  padding-top: 70px;
 }
 
 .current-page {
@@ -841,10 +884,10 @@ footer .call-me-button {
 }
 
 footer .icon-png {
-  -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  transition: -webkit-transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), -webkit-transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.275);
+  transition: -webkit-transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.275);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.275);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.275), -webkit-transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.275);
   margin-bottom: 10px;
 }
 
@@ -864,5 +907,10 @@ footer #footer-notes {
   color: aliceblue;
   background-color: #aaaaaa;
   padding: 5px 0;
+}
+
+footer #footer-arrow {
+  font-size: 2.5em;
+  color: white;
 }
 /*# sourceMappingURL=index.css.map */

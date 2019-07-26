@@ -66,28 +66,37 @@ main {
     @include lg-screens {
         height: 100vh;
     }
+    
 }
 
 .section-2,
 .section-3,
 .section-4 {
-    height: 93vh; // testing functionality.
+    height: 100vh; // testing functionality.
     width: 100%;
     text-align: center;
+    position: relative;
     @include lg-screens {
         height: 100vh;
     }
 }
 
 .section-2 {
+    p {
+        width: 85%;
+    }
+
+    h1 {
+        margin: 10px 0 15px;
+    }
     @include lg-screens {
         display: flex;
         flex-direction: row;
         width: 90%;
         div {
             h1 {
-                padding-top: 0;
-                margin-top: 60px;
+                padding-top: 100px;
+                margin-top: 0;
             }
             .snapwidget {
                 width: 100%;
@@ -100,29 +109,53 @@ main {
             width: 40%;
             padding-top: 0px;
         }
-
-
     }
 }
 
-// bouncing arrows with Javascript
-#arrow-wrapper {
+
+.first-arrow {
     font-size: 2.5em;
     position: absolute;
     bottom: 2%; 
     left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    @extend %bouncing-arrow;
+}
+
+.second-arrow {
+    color:black;
+    font-size: 2.5em;
+    position: absolute;
+    bottom: 2%; 
+    left: 50%;
+    transform: translateX(-50%);
+    @extend %bouncing-arrow;
+}
+
+.third-arrow {
+    color:black;
+    font-size: 2.5em;
+    position: absolute;
+    bottom: 2%; 
+    left: 50%;
+    transform: translateX(-50%);
+    @extend %bouncing-arrow;
+}
+
+.fourth-arrow {
+    color:black;
+    font-size: 2.5em;
+    position: absolute;
+    bottom: 2%; 
+    left: 50%;
+    transform: translateX(-50%);
     @extend %bouncing-arrow;
 }
 
 i:hover {
     cursor: pointer;
 }
-
-#footer-arrow {
-    font-size: 2.5em;
-    @extend %bouncing-arrow;
-}
-
 
 .profile-picture {
     margin: auto;
@@ -144,8 +177,6 @@ i:hover {
     }
 }
 
-
-
 .gallery {
     text-decoration: none;
     h1 {
@@ -161,11 +192,17 @@ i:hover {
 }
 
 .div-cards {
-    margin-top: 50px;
-    width: 90%;
+    width: 100%;
     li {
         list-style-type: none;
     }
+}
+
+#contact,
+#estimates,
+#hours {
+    margin-top: 0;
+    padding-top: 70px;
 }
 
 .current-page {
@@ -200,7 +237,7 @@ footer {
     }
 
     .icon-png {
-        transition: transform .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        transition: transform .4s cubic-bezier(0.175, 0.885, 0.32, 2.275);
         margin-bottom: 10px;
         img {
             width: 40px;
@@ -216,6 +253,11 @@ footer {
         color: rgb(240, 248, 255);
         background-color: rgb(170, 170, 170);
         padding: 5px 0;
+    }
+    #footer-arrow {
+        font-size: 2.5em;
+        @extend %bouncing-arrow;
+        color: white;
     }
 }
 

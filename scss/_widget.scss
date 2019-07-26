@@ -12,8 +12,8 @@ iframe {
 
 .snap {
     border: none; 
-    overflow: hidden; 
-    height: 60%;
+    overflow: hidden;
+    width: 50%;
     @include lg-screens {
         width: 45%;
         max-height: 500px;
