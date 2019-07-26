@@ -19,7 +19,7 @@ $('.fa-angle-double-up').click(() => {
 window.onscroll = function() {myFunction()};
 
 // Get the navbar
-var navbar = document.getElementsByClassName("toggle");
+var navbar = document.querySelector("nav");
 
 // Get the offset position of the navbar
 var sticky = navbar.offsetTop;
@@ -28,5 +28,7 @@ var sticky = navbar.offsetTop;
 function myFunction() {
   if (window.pageYOffset >= sticky) {
     navbar.classList.add("sticky");
-  } 
+  } else {
+    navbar.classList.remove("sticky");
+  }
 }

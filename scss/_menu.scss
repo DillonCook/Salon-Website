@@ -1,23 +1,26 @@
 //--------------------------------- responsive CSS only menu --------------------------------------
-
-nav {
-    margin: 0 auto;
-    width: 100%;
-    background-color: $background-pink;
-    position: absolute; // testing functionality to position drop-down over other elements
-    .current {
-        animation: color-change 3s infinite alternate;
-        font-size: 3em;
-        font-weight: 700;
-    }
+header {
     h1 {
         background-color: $background-pink;
         margin: 0;
         padding: 20px 0;
     }
+}
+nav {
+    margin: 0 auto;
+    width: 100%;
+    background-color: $background-pink;
+    position: absolute; // testing functionality to position drop-down over other elements
+    z-index: 5;
+    .current {
+        animation: color-change 3s infinite alternate;
+        font-size: 3em;
+        font-weight: 700;
+    }
     a {
         color: $pink;
     }
+
 }
 
 #nav-checkbox,
