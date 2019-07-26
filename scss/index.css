@@ -517,6 +517,7 @@ nav a {
     background-color: #ffdfe1;
     -webkit-transition: background-color .4s ease;
     transition: background-color .4s ease;
+    color: #dd0000;
   }
   .toggle:hover {
     background: #ffd4db;
@@ -655,10 +656,6 @@ h4 {
 }
 
 main {
-  background-image: url(../images/bloom-blossom.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   padding-bottom: 50px;
 }
 
@@ -707,6 +704,12 @@ main {
   }
 }
 
+.section-2 {
+  background-image: url(../images/background-cactus-decor-1470168.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
 .section-2 p {
   width: 85%;
 }
@@ -724,7 +727,7 @@ main {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    width: 90%;
+    width: 100%;
   }
   .section-2 div {
     margin-top: 0px;
@@ -732,7 +735,7 @@ main {
     padding-top: 0px;
   }
   .section-2 div h1 {
-    padding-top: 100px;
+    padding: 100px 0 30px;
     margin-top: 0;
   }
   .section-2 div .snapwidget {
@@ -742,6 +745,18 @@ main {
   .section-2 div .snapwidget iframe {
     width: 100%;
   }
+}
+
+.section-3 {
+  background-image: url(../images/salon.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.section-4 {
+  background-image: url(../images/bloom-blossom.jpg);
+  background-size: cover;
+  background-position: center;
 }
 
 .first-arrow {
