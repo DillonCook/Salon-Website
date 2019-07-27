@@ -7,7 +7,7 @@
 %bouncing-arrow {
     i {
         padding-top: 20px;
-        animation: swing 4s infinite;
+        animation: swing 5s infinite;
     }
 }
 
@@ -26,7 +26,7 @@
     }
     30%
     {
-        transform: translateY(-20px) scale(1.2);
+        transform: translateY(-10px) scale(1.2);
     }
     50%
     {

@@ -24,6 +24,7 @@ h1 {
     text-align: center;
     color: $pink;
     font-size: 3.5em;
+    text-shadow: white 0 0 3px;
 }
 
 h3 {
@@ -47,6 +48,7 @@ h4 {
     font-weight: bold;
 }
 
+// ----------------------------- PAGE SECTIONS ----------------------------------
 .section-1 {
     height: 100%; // testing functionality. replaced 93vh
     width: 100%;
@@ -76,8 +78,12 @@ h4 {
     background-image: url(../images/background-cactus-decor-1470168.jpg);
     background-size: cover;
     background-position: center;
-    p {
-        width: 85%;
+
+    .div-cards {
+        width: 80%;
+        background-color: rgba(255, 255, 255, 0.7);
+        border-radius: 10px;
+        padding: 0 10px 10px 10px;
     }
 
     h1 {
@@ -107,41 +113,52 @@ h4 {
 }
 
 .section-3 {
-    background-image: url(../images/salon.jpg);
+    background-image: url(../images/analogue-background.jpg);
     background-size: cover;
-    background-position: center;
+    background-position: left;
+    
 }
 
 .section-4 {
     background-image: url(../images/bloom-blossom.jpg);
     background-size: cover;
     background-position: center;
+    .div-cards {
+        p {
+            font-size: 1.5em;
+        }
+        li {
+            list-style-type: none;
+            font-size: 1.5em;
+        }
+    }
+    
 }
 
-
+// ------------------------------------- ARROWS ---------------------------------------
 .first-arrow {
-    font-size: 2.5em;
+    font-size: 2em;
     position: absolute;
     bottom: 2%; 
     left: 50%;
     transform: translateX(-50%);
-    color: white;
+    color: rgba(255, 255, 255, 0.75);
     @extend %bouncing-arrow;
 }
 
 .second-arrow {
-    color:black;
-    font-size: 2.5em;
+    color:rgba(0, 0, 0, 0.75);
+    font-size: 2em;
     position: absolute;
-    bottom: 5%; 
+    bottom: 2%; 
     left: 50%;
     transform: translateX(-50%);
     @extend %bouncing-arrow;
 }
 
 .third-arrow {
-    color:black;
-    font-size: 2.5em;
+    color:rgba(0, 0, 0, 0.75);
+    font-size: 2em;
     position: absolute;
     bottom: 5%; 
     left: 50%;
@@ -150,8 +167,8 @@ h4 {
 }
 
 .fourth-arrow {
-    color:black;
-    font-size: 2.5em;
+    color:rgba(0, 0, 0, 0.75);
+    font-size: 2em;
     position: absolute;
     bottom: 5%; 
     left: 50%;
@@ -163,6 +180,7 @@ i:hover {
     cursor: pointer;
 }
 
+// --------------------------------------
 .profile-picture {
     margin: auto;
     text-align: center;
@@ -197,13 +215,6 @@ i:hover {
     }
 }
 
-.div-cards {
-    width: 100%;
-    li {
-        list-style-type: none;
-    }
-}
-
 #contact,
 #estimates,
 #hours {
@@ -235,6 +246,7 @@ footer {
         display: flex;
         flex-direction: column;
         padding: 0 0 25px;
+        width: 200px;
         p {
             padding: 2px 0;
         }
@@ -274,7 +286,7 @@ footer {
     #footer-arrow {
         font-size: 2.5em;
         @extend %bouncing-arrow;
-        color: white;
+        color: rgb(255, 255, 255);
     }
 }
 

@@ -355,8 +355,8 @@ footer {
 
 .first-arrow i, .second-arrow i, .third-arrow i, .fourth-arrow i, footer #footer-arrow i {
   padding-top: 20px;
-  -webkit-animation: swing 4s infinite;
-          animation: swing 4s infinite;
+  -webkit-animation: swing 5s infinite;
+          animation: swing 5s infinite;
 }
 
 @-webkit-keyframes color-change {
@@ -383,8 +383,8 @@ footer {
             transform: translateY(10px) scale(0.9);
   }
   30% {
-    -webkit-transform: translateY(-20px) scale(1.2);
-            transform: translateY(-20px) scale(1.2);
+    -webkit-transform: translateY(-10px) scale(1.2);
+            transform: translateY(-10px) scale(1.2);
   }
   50% {
     -webkit-transform: translateY(6px);
@@ -410,8 +410,8 @@ footer {
             transform: translateY(10px) scale(0.9);
   }
   30% {
-    -webkit-transform: translateY(-20px) scale(1.2);
-            transform: translateY(-20px) scale(1.2);
+    -webkit-transform: translateY(-10px) scale(1.2);
+            transform: translateY(-10px) scale(1.2);
   }
   50% {
     -webkit-transform: translateY(6px);
@@ -599,6 +599,7 @@ iframe {
 .snapwidget {
   width: 100%;
   text-align: center;
+  padding: 70px 0 20px;
 }
 
 .snap {
@@ -645,6 +646,7 @@ h1 {
   text-align: center;
   color: #fa6d84;
   font-size: 3.5em;
+  text-shadow: white 0 0 3px;
 }
 
 h3 {
@@ -706,8 +708,11 @@ h4 {
   background-position: center;
 }
 
-.section-2 p {
-  width: 85%;
+.section-2 .div-cards {
+  width: 80%;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  padding: 0 10px 10px 10px;
 }
 
 .section-2 h1 {
@@ -744,9 +749,9 @@ h4 {
 }
 
 .section-3 {
-  background-image: url(../images/salon.jpg);
+  background-image: url(../images/analogue-background.jpg);
   background-size: cover;
-  background-position: center;
+  background-position: left;
 }
 
 .section-4 {
@@ -755,29 +760,38 @@ h4 {
   background-position: center;
 }
 
+.section-4 .div-cards p {
+  font-size: 1.5em;
+}
+
+.section-4 .div-cards li {
+  list-style-type: none;
+  font-size: 1.5em;
+}
+
 .first-arrow {
-  font-size: 2.5em;
+  font-size: 2em;
   position: absolute;
   bottom: 2%;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  color: white;
+  color: rgba(255, 255, 255, 0.75);
 }
 
 .second-arrow {
-  color: black;
-  font-size: 2.5em;
+  color: rgba(0, 0, 0, 0.75);
+  font-size: 2em;
   position: absolute;
-  bottom: 5%;
+  bottom: 2%;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
 
 .third-arrow {
-  color: black;
-  font-size: 2.5em;
+  color: rgba(0, 0, 0, 0.75);
+  font-size: 2em;
   position: absolute;
   bottom: 5%;
   left: 50%;
@@ -786,8 +800,8 @@ h4 {
 }
 
 .fourth-arrow {
-  color: black;
-  font-size: 2.5em;
+  color: rgba(0, 0, 0, 0.75);
+  font-size: 2em;
   position: absolute;
   bottom: 5%;
   left: 50%;
@@ -836,14 +850,6 @@ i:hover {
   text-decoration: none;
 }
 
-.div-cards {
-  width: 100%;
-}
-
-.div-cards li {
-  list-style-type: none;
-}
-
 #contact,
 #estimates,
 #hours {
@@ -888,6 +894,7 @@ footer .div-cards {
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 0 0 25px;
+  width: 200px;
 }
 
 footer .div-cards p {
