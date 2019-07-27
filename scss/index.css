@@ -783,7 +783,7 @@ h4 {
   color: rgba(0, 0, 0, 0.75);
   font-size: 2em;
   position: absolute;
-  bottom: 2%;
+  bottom: 5%;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
