@@ -47,6 +47,12 @@
 }
 
 // Media Query
+@mixin  md-screens {
+    @media(min-width: 700px){
+        @content;
+    }
+}
+
 @mixin lg-screens {
     @media(min-width: 850px) {
         @content;
