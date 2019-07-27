@@ -8,7 +8,7 @@ $('.first-arrow').click(() => {
 
 $('.second-arrow').click(() => {
   $('html, body').animate({
-      scrollTop: $('.section-3').offset().top
+      scrollTop: $('.section-4').offset().top
   }, 400);
 });
 
