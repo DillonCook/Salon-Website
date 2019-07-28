@@ -364,7 +364,7 @@ footer .footer-wrapper {
     color: #ff111d;
   }
   100% {
-    color: #fa6d84;
+    color: #ff8686;
   }
 }
 
@@ -373,7 +373,7 @@ footer .footer-wrapper {
     color: #ff111d;
   }
   100% {
-    color: #fa6d84;
+    color: #ff8686;
   }
 }
 
@@ -431,6 +431,10 @@ footer .footer-wrapper {
   }
 }
 
+header {
+  font-family: "Open Sans Condensed", sans-serif;
+}
+
 header h1 {
   background-color: #fff1f3;
   margin: 0;
@@ -446,10 +450,9 @@ nav {
 }
 
 nav .current {
-  -webkit-animation: color-change 3s infinite alternate;
-          animation: color-change 3s infinite alternate;
-  font-size: 3em;
-  font-weight: 700;
+  -webkit-animation: color-change 2s infinite alternate;
+          animation: color-change 2s infinite alternate;
+  font-size: 1.7em !important;
 }
 
 nav a {
@@ -599,13 +602,13 @@ iframe {
 .snapwidget {
   width: 100%;
   text-align: center;
-  padding: 80px 0 20px;
+  padding: 20px 0;
 }
 
 .snap {
   border: none;
   overflow: hidden;
-  width: 50%;
+  width: 100%;
 }
 
 @media (min-width: 850px) {
@@ -632,6 +635,12 @@ body {
   width: 100%;
   margin: 0;
   text-align: center;
+}
+
+main {
+  background-image: url(../images/bloom-blossom.jpg);
+  background-size: cover;
+  background-position: right;
 }
 
 h1,
@@ -689,31 +698,23 @@ h4 {
 .section-2,
 .section-3,
 .section-4 {
-  height: 100vh;
+  height: 100%;
   width: 100%;
   text-align: center;
   position: relative;
 }
 
-@media (min-width: 850px) {
-  .section-2,
-  .section-3,
-  .section-4 {
-    height: 100vh;
-  }
-}
-
-.section-2 {
-  background-image: url(../images/background-cactus-decor-1470168.jpg);
-  background-size: cover;
-  background-position: center;
-}
-
 .section-2 .div-cards {
-  width: 80%;
-  background-color: rgba(255, 255, 255, 0.7);
-  border-radius: 10px;
+  width: 85%;
   padding: 0 10px 10px 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.section-2 .div-cards:nth-child(2) {
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+  max-width: 85%;
 }
 
 .section-2 h1 {
@@ -729,23 +730,18 @@ h4 {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    width: 100%;
+    width: 90%;
   }
   .section-2 .div-cards {
-    width: 40%;
-    background-color: rgba(255, 255, 255, 0.801);
-    margin-top: 200px;
+    width: 60%;
+    background-color: none;
+    border-radius: 10px;
+    margin-top: 75px;
     max-height: 580px;
     font-size: 1.5em;
   }
-  .section-2 .snapwidget {
-    width: 40%;
-    height: 100%;
-  }
-  .section-2 .snapwidget iframe {
-    width: 100%;
-    margin-top: 200px;
-    max-height: 500px;
+  .section-2 .div-cards .snapwidget {
+    width: 90%;
   }
   .section-2 div {
     margin-top: 0px;
@@ -755,24 +751,6 @@ h4 {
     padding: 0 0 30px;
     margin-top: 0;
   }
-}
-
-@media (min-width: 1024px) {
-  .section-2 .div-cards {
-    max-height: 490px;
-  }
-}
-
-.section-3 {
-  background-image: url(../images/analogue-background.jpg);
-  background-size: cover;
-  background-position: left;
-}
-
-.section-4 {
-  background-image: url(../images/bloom-blossom.jpg);
-  background-size: cover;
-  background-position: center;
 }
 
 .section-4 .div-cards p {
@@ -861,10 +839,12 @@ i:hover {
 .gallery h1 {
   margin-top: 0;
   padding-top: 60px;
+  -webkit-transition: color .5s ease;
+  transition: color .5s ease;
 }
 
 .gallery h1:hover {
-  color: #ec4460;
+  color: #ff1d43;
 }
 
 .gallery:hover {
@@ -880,10 +860,6 @@ i:hover {
 #hours {
   margin-top: 0;
   padding-top: 155px;
-}
-
-.current-page {
-  font-weight: bold;
 }
 
 footer {

@@ -1,5 +1,6 @@
 //--------------------------------- responsive CSS only menu --------------------------------------
 header {
+    font-family: $secondary-font;
     h1 {
         background-color: $background-pink;
         margin: 0;
@@ -13,9 +14,8 @@ nav {
     position: absolute; // testing functionality to position drop-down over other elements
     z-index: 5;
     .current {
-        animation: color-change 3s infinite alternate;
-        font-size: 3em;
-        font-weight: 700;
+        animation: color-change 2s infinite alternate;
+        font-size: 1.7em !important;
     }
     a {
         color: $pink;
