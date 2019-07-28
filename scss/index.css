@@ -467,7 +467,7 @@ nav a {
 .menu {
   padding: 0;
   margin: 0 auto;
-  max-width: 700px;
+  max-width: 755px;
   height: 50px;
   border-radius: 0px;
   display: -webkit-box;
@@ -716,7 +716,7 @@ h4 {
 }
 
 .section-2 .div-cards:nth-child(2) {
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.6);
   border-radius: 10px;
   max-width: 85%;
 }
@@ -757,18 +757,37 @@ h4 {
   }
 }
 
-.section-4 .div-cards p {
+.section-4 h1 {
+  margin-bottom: 20px;
+}
+
+.section-4 .div-cards {
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
+  width: 85%;
+  margin: 50px auto;
+  padding-bottom: 10px;
+}
+
+.section-4 .div-cards h5 {
   font-size: 1.5em;
 }
 
 .section-4 .div-cards li {
   list-style-type: none;
-  font-size: 1.5em;
+  font-size: 1em;
+  padding: 5px 0;
 }
 
 @media (min-width: 850px) {
-  .section-4 #estimates {
-    padding-top: 150px;
+  .section-4 {
+    width: 90%;
+  }
+  .section-4 .div-cards h1 {
+    font-size: 5.5em;
+  }
+  .section-4 .div-cards li {
+    font-size: 1.5em;
   }
 }
 
@@ -825,15 +844,17 @@ i:hover {
   text-decoration: none;
 }
 
-#contact,
-#estimates {
-  margin-top: 0;
-  padding-top: 70px;
-}
-
 #hours {
   margin-top: 0;
-  padding-top: 155px;
+  padding-top: 55px;
+}
+
+#review-container {
+  width: 85%;
+  background-color: rgba(211, 211, 211, 0.5);
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 15px;
 }
 
 footer {
@@ -914,7 +935,7 @@ footer .footer-wrapper .icon-png:hover {
 
 @media (min-width: 1024px) {
   footer .footer-wrapper #hours {
-    padding-top: 100px;
+    padding-top: 50px;
   }
   footer .footer-wrapper .div-cards {
     font-size: 1.15em;

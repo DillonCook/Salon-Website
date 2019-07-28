@@ -90,7 +90,7 @@ h4 {
         }
     }
     .div-cards:nth-child(2) {
-        background-color: rgba(255, 255, 255, 0.4);
+        background-color: rgba(255, 255, 255, 0.6);
         border-radius: 10px;
         max-width: 85%;
     }
@@ -129,19 +129,34 @@ h4 {
 
 
 .section-4 {
-
+    h1 {
+        margin-bottom: 20px;
+    }
     .div-cards {
-        p {
+        background-color: rgba(255, 255, 255, 0.6);
+        border-radius: 10px;
+        width: 85%;
+        margin: 50px auto;
+        padding-bottom: 10px;
+        h5 {
             font-size: 1.5em;
         }
+
         li {
             list-style-type: none;
-            font-size: 1.5em;
+            font-size: 1em;
+            padding: 5px 0;
         }
     }
     @include lg-screens {
-        #estimates {
-            padding-top: 150px;
+        width: 90%;
+        .div-cards {
+            h1 {
+                font-size: 5.5em;
+            }
+            li {
+                font-size: 1.5em;
+            }
         }
     }
     
@@ -196,17 +211,18 @@ i:hover {
     }
 }
 
-#contact,
-#estimates{
-    margin-top: 0;
-    padding-top: 70px;
-}
-
 #hours  {
     margin-top: 0;
-    padding-top: 155px;
+    padding-top: 55px;
 }
-
+//----------------------------- Reviews ---------------------------------
+#review-container {
+    width: 85%;
+    background-color: rgba(211, 211, 211, 0.5);
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
 
 // ---------------- Footer -----------------------
 footer {
@@ -259,7 +275,7 @@ footer {
 
         @include xlg-screens {
             #hours {
-                padding-top: 100px;
+                padding-top: 50px;
             }
             .div-cards {
                 font-size: 1.15em;
