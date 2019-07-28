@@ -69,7 +69,6 @@ h4 {
 }
 
 .section-2,
-.section-3,
 .section-4 {
     height: 100%; // testing functionality.
     width: 100%;
@@ -79,9 +78,6 @@ h4 {
 }
 
 .section-2 {
-    // background-image: url(../images/background-cactus-decor-1470168.jpg);
-    // background-size: cover;
-    // background-position: center;
 
     .div-cards {
         width: 85%;
@@ -123,18 +119,12 @@ h4 {
             }
         }
     }
-    // @include xlg-screens {
-    //     .snapwidget {
-    //         max-height: 250px;
-    //     }
-    // }
+
 }
 
 
 .section-4 {
-    // background-image: url(../images/bloom-blossom.jpg);
-    // background-size: cover;
-    // background-position: center;
+
     .div-cards {
         p {
             font-size: 1.5em;
@@ -163,36 +153,6 @@ h4 {
     @extend %bouncing-arrow;
 }
 
-.second-arrow {
-    color:rgba(0, 0, 0, 0.75);
-    font-size: 2em;
-    position: absolute;
-    bottom: 5%; 
-    left: 50%;
-    transform: translateX(-50%);
-    @extend %bouncing-arrow;
-}
-
-.third-arrow {
-    color:rgba(0, 0, 0, 0.75);
-    font-size: 2em;
-    position: absolute;
-    bottom: 5%; 
-    left: 50%;
-    transform: translateX(-50%);
-    @extend %bouncing-arrow;
-}
-
-.fourth-arrow {
-    color:rgba(0, 0, 0, 0.75);
-    font-size: 2em;
-    position: absolute;
-    bottom: 5%; 
-    left: 50%;
-    transform: translateX(-50%);
-    @extend %bouncing-arrow;
-}
-
 i:hover {
     cursor: pointer;
 }
@@ -205,10 +165,8 @@ i:hover {
     .katie-profile {
         height: 40%;
         border-radius: 50%;
-        // box-shadow: 0 0 10px 0 black;
         margin-top: 200px;
         border: 3px white solid;
-        // transition: all .3s ease-in-out;
     }
     h2 {
         color: $pink;
@@ -275,9 +233,7 @@ footer {
         #location {
             margin-bottom: 20px;
         }
-        // .gmaps {
-        //     margin-bottom: 20px;
-        // }
+
         h1 {
             margin-bottom: 10px;
         }
