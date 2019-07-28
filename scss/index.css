@@ -353,7 +353,7 @@ footer .footer-wrapper {
           flex-direction: column;
 }
 
-.first-arrow i, .second-arrow i, .third-arrow i, .fourth-arrow i, footer #footer-arrow i {
+.first-arrow i, footer #footer-arrow i {
   padding-top: 20px;
   -webkit-animation: swing 5s infinite;
           animation: swing 5s infinite;
@@ -696,7 +696,6 @@ h4 {
 }
 
 .section-2,
-.section-3,
 .section-4 {
   height: 100%;
   width: 100%;
@@ -709,6 +708,11 @@ h4 {
   padding: 0 10px 10px 10px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+.section-2 .div-cards .snapwidget iframe {
+  width: 100%;
+  max-height: 435px;
 }
 
 .section-2 .div-cards:nth-child(2) {
@@ -776,36 +780,6 @@ h4 {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   color: rgba(255, 255, 255, 0.75);
-}
-
-.second-arrow {
-  color: rgba(0, 0, 0, 0.75);
-  font-size: 2em;
-  position: absolute;
-  bottom: 5%;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-}
-
-.third-arrow {
-  color: rgba(0, 0, 0, 0.75);
-  font-size: 2em;
-  position: absolute;
-  bottom: 5%;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-}
-
-.fourth-arrow {
-  color: rgba(0, 0, 0, 0.75);
-  font-size: 2em;
-  position: absolute;
-  bottom: 5%;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
 }
 
 i:hover {
