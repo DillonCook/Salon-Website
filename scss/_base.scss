@@ -159,6 +159,9 @@ h4 {
             }
         }
     }
+    @include xlg-screens {
+        max-width: 800px;
+    }
     
 }
 
@@ -222,6 +225,12 @@ i:hover {
     padding: 10px;
     border-radius: 10px;
     margin-bottom: 15px;
+}
+
+#reviews {
+    @include lg-screens {
+        font-size: 5.5em;
+    }
 }
 
 // ---------------- Footer -----------------------

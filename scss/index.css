@@ -791,6 +791,12 @@ h4 {
   }
 }
 
+@media (min-width: 1024px) {
+  .section-4 {
+    max-width: 800px;
+  }
+}
+
 .first-arrow {
   font-size: 2em;
   position: absolute;
@@ -855,6 +861,12 @@ i:hover {
   padding: 10px;
   border-radius: 10px;
   margin-bottom: 15px;
+}
+
+@media (min-width: 850px) {
+  #reviews {
+    font-size: 5.5em;
+  }
 }
 
 footer {
