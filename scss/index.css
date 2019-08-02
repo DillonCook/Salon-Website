@@ -852,6 +852,10 @@ i:hover {
   text-decoration: none;
 }
 
+.facebook-reviews {
+  width: 90%;
+}
+
 #hours {
   margin-top: 0;
   padding-top: 55px;
