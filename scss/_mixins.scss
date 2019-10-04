@@ -46,6 +46,25 @@
     }
 }
 
+@keyframes entrance {
+    0% {
+        transform: translateY(-550px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes exit {
+    0% {
+        transform: translateY(0);
+    }
+    
+    100% {
+        transform: translateY(350px);
+    }
+}
+
 // Media Query
 @mixin  md-screens {
     @media(min-width: 700px){
@@ -63,4 +82,9 @@
     @media(min-width: 1024px) {
         @content;
     }
+}
+
+@mixin flex-row {
+    display: flex;
+
 }

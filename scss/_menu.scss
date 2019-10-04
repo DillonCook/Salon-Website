@@ -1,130 +1,141 @@
-//--------------------------------- responsive CSS only menu --------------------------------------
-header {
-    font-family: $secondary-font;
-    h1 {
-        background-color: $background-pink;
-        margin: 0;
-        padding: 20px 0;
-    }
+
+//Base Styles Responsive Menu
+h1 {
+    margin: 0;
+    padding: 20px 0;
 }
+
 nav {
     margin: 0 auto;
-    width: 100%;
-    background-color: $background-pink;
-    position: absolute; // testing functionality to position drop-down over other elements
-    z-index: 5;
-    .current {
-        animation: color-change 2s infinite alternate;
-        font-size: 1.7em !important;
+    position: absolute;
+    z-index: 15;
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    margin-top: 0;
+    @media (min-width: 551px) {
+        a {
+            background-color: rgba(0, 0, 0, 0.35);
+            border-radius: 50px;
+            margin-top: 10px;
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.5);            
+            }
+        }
     }
-    a {
-        color: $pink;
-    }
-
 }
 
-#nav-checkbox,
-.toggle {
-    display: none;
-}
-
-.menu {
-    padding: 0;
-    margin: 0 auto;
-    max-width: 755px;
-    height: 50px;
-    border-radius: 0px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    list-style-type: none;
-}
-  
-.menu li a {
+.nav a {
     text-decoration: none;
     align-content: center;
-    font-size: 1.25em;
+    font-size: 1.5em;
+    font-weight: 600;
     padding: 10px 15px;
-    transition: color .6s ease, font-size .4s ease;
-    &:hover {
-        color: rgb(231, 36, 36);
-    }
+    transition: color .4s ease, background-color .4s ease;
+    color: rgb(247, 247, 247);
+    cursor: pointer;
 }
 
-@media (min-width: 600px) {
-    .menu li a {
-        font-size: 1.5em;
-    }
-}
-  
-@media (max-width: 550px) {
-    .toggle {
-        clear: both;
-        display: block;
-        text-align: center;
-        line-height: 40px;
-        cursor: pointer;
+@media (min-width: 551px) {
+    nav {
+        margin-top: 5px;
         width: 100%;
-        padding: 10px 0;
-        height: 40px;
-        font-size: 1.5em;
-        background-color: $toggle-pink;
-        transition: background-color .4s ease;
-        color: rgb(221, 0, 0);
+        .toggle {
+            display: none;
+        }
+        .nav {
+            @include flex-row;
+            justify-content: space-around;
+            width: 95%;
+            padding: 0;
+            margin: 0 auto;
+            max-width: 800px;
+            height: 50px;
+            align-items: center;
+            list-style-type: none;
+            animation: entrance .5s ease-out 1;
+            #nav-home {
+                margin-right: auto;
+            }
+            a {                
+                text-shadow: 0 2px 2px rgb(0, 0, 0);
+                margin-right: 5px;
+            }
+            
+            .container {
+                @include flex-row;
+            }
+        }
     }
-    .toggle:hover {
-        background: $hover-pink;
-    }
-    #nav-checkbox:checked + label .nav li {
-        opacity: 1;
-        visibility: visible;
-        transition: all 1s ease-in;
-    }
+}
 
-    #bars {
-        transition: transform .65s ease;
-        max-width: 50px;
-        color: rgb(221, 0, 0);
-    }
+// Responsive drop down menu
+@media (max-width: 550px) {
+    nav {
+        width: 100%;
+        .menu-show {
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+            margin: 0;
+            background-color: rgba(255, 160, 160, 0.85);
+            visibility: hidden;
+            height: 0;
+            transition: all .4s ease;
+            overflow: hidden;
+            a {
+                text-decoration: none;
+                font-size: 1.3em;
+                animation: exit .4s ease-in 1;
+            }
+            
+            & + .toggle > #bars {
+                transition: transform .5s ease;
+                transform: rotate(0deg);
+            }
+        }
+        .menu-hide {
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+            margin: 0;
+            background-color: rgba(255, 160, 160, 0.85);
+            visibility: visible;
+            height: 230px;
+            transition: height .4s ease, visibility .5s ease;
+            overflow: hidden;
+            a {
+                text-decoration: none;
+                font-size: 1.3em;
+                animation: entrance .4s ease 1;
 
-    #nav-checkbox:checked + label #bars {
-        transform: rotate(90deg);
-    }
-
-    #nav-checkbox + label .nav li {
-        opacity: 0;
-        transition: visibility .5s ease, opacity .3s ease;
-        visibility: none;
+            }
         
-    }
-
-    #nav-checkbox:checked + label .nav {
-        height: 230px;
-    }
-
-    .menu {
-        border-radius: 0px;
-        border-top-left-radius: 5px;
-        border-top-right-radius: 5px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        height: 0px;
-        transition: height .4s ease-out;
-    }
-    .menu li {
-        display: flex;
-        align-self: center;
-        width: 95%;
-        opacity: 0;
-        visibility: hidden;
-    }
-    .menu li a {
-        width: 95%;
-        text-align: center;
-        align-self: center;
-        align-content: center;
+            & + .toggle > #bars {
+                transition: transform .5s ease;
+                transform: rotate(90deg);
+            }
+        }
+        .toggle {
+            margin-top: 0;
+            clear: both;
+            display: block;
+            text-align: center;
+            line-height: 40px;
+            cursor: pointer;
+            width: 100%;
+            padding: 10px 0;
+            height: 40px;
+            font-size: 1.5em;
+            transition: background-color .4s ease;
+            color: pink;
+            background-color: rgba(255, 139, 139, 0.9);
+            #bars {
+                width: 30px;
+                margin: 0 auto;
+                color: pink;
+            }   
+        }
     }
 }

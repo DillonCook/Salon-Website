@@ -34,7 +34,7 @@ main {
    */
 h1 {
   font-size: 2em;
-  margin: 0.67em 0;
+  margin: .67em 0;
 }
 
 /* Grouping content
@@ -431,82 +431,199 @@ footer .footer-wrapper {
   }
 }
 
-header {
-  font-family: "Open Sans Condensed", sans-serif;
+@-webkit-keyframes entrance {
+  0% {
+    -webkit-transform: translateY(-550px);
+            transform: translateY(-550px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
 }
 
-header h1 {
-  background-color: #fff1f3;
+@keyframes entrance {
+  0% {
+    -webkit-transform: translateY(-550px);
+            transform: translateY(-550px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes exit {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(350px);
+            transform: translateY(350px);
+  }
+}
+
+@keyframes exit {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(350px);
+            transform: translateY(350px);
+  }
+}
+
+h1 {
   margin: 0;
   padding: 20px 0;
 }
 
 nav {
   margin: 0 auto;
-  width: 100%;
-  background-color: #fff1f3;
   position: absolute;
-  z-index: 5;
+  z-index: 15;
 }
 
-nav .current {
-  -webkit-animation: color-change 2s infinite alternate;
-          animation: color-change 2s infinite alternate;
-  font-size: 1.7em !important;
+.sticky {
+  position: fixed;
+  top: 0;
+  margin-top: 0;
 }
 
-nav a {
-  color: #fa6d84;
+@media (min-width: 551px) {
+  .sticky a {
+    background-color: rgba(0, 0, 0, 0.35);
+    border-radius: 50px;
+    margin-top: 10px;
+  }
+  .sticky a:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
 }
 
-#nav-checkbox,
-.toggle {
-  display: none;
-}
-
-.menu {
-  padding: 0;
-  margin: 0 auto;
-  max-width: 755px;
-  height: 50px;
-  border-radius: 0px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  list-style-type: none;
-}
-
-.menu li a {
+.nav a {
   text-decoration: none;
   -ms-flex-line-pack: center;
       align-content: center;
-  font-size: 1.25em;
+  font-size: 1.5em;
+  font-weight: 600;
   padding: 10px 15px;
-  -webkit-transition: color .6s ease, font-size .4s ease;
-  transition: color .6s ease, font-size .4s ease;
+  -webkit-transition: color .4s ease, background-color .4s ease;
+  transition: color .4s ease, background-color .4s ease;
+  color: #f7f7f7;
+  cursor: pointer;
 }
 
-.menu li a:hover {
-  color: #e72424;
-}
-
-@media (min-width: 600px) {
-  .menu li a {
-    font-size: 1.5em;
+@media (min-width: 551px) {
+  nav {
+    margin-top: 5px;
+    width: 100%;
+  }
+  nav .toggle {
+    display: none;
+  }
+  nav .nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 95%;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 800px;
+    height: 50px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    list-style-type: none;
+    -webkit-animation: entrance .5s ease-out 1;
+            animation: entrance .5s ease-out 1;
+  }
+  nav .nav #nav-home {
+    margin-right: auto;
+  }
+  nav .nav a {
+    text-shadow: 0 2px 2px black;
+    margin-right: 5px;
+  }
+  nav .nav .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 
 @media (max-width: 550px) {
-  .toggle {
+  nav {
+    width: 100%;
+  }
+  nav .menu-show {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0;
+    margin: 0;
+    background-color: rgba(255, 160, 160, 0.85);
+    visibility: hidden;
+    height: 0;
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+    overflow: hidden;
+  }
+  nav .menu-show a {
+    text-decoration: none;
+    font-size: 1.3em;
+    -webkit-animation: exit .4s ease-in 1;
+            animation: exit .4s ease-in 1;
+  }
+  nav .menu-show + .toggle > #bars {
+    -webkit-transition: -webkit-transform .5s ease;
+    transition: -webkit-transform .5s ease;
+    transition: transform .5s ease;
+    transition: transform .5s ease, -webkit-transform .5s ease;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  nav .menu-hide {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0;
+    margin: 0;
+    background-color: rgba(255, 160, 160, 0.85);
+    visibility: visible;
+    height: 230px;
+    -webkit-transition: height .4s ease, visibility .5s ease;
+    transition: height .4s ease, visibility .5s ease;
+    overflow: hidden;
+  }
+  nav .menu-hide a {
+    text-decoration: none;
+    font-size: 1.3em;
+    -webkit-animation: entrance .4s ease 1;
+            animation: entrance .4s ease 1;
+  }
+  nav .menu-hide + .toggle > #bars {
+    -webkit-transition: -webkit-transform .5s ease;
+    transition: -webkit-transform .5s ease;
+    transition: transform .5s ease;
+    transition: transform .5s ease, -webkit-transform .5s ease;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  nav .toggle {
+    margin-top: 0;
     clear: both;
     display: block;
     text-align: center;
@@ -516,79 +633,15 @@ nav a {
     padding: 10px 0;
     height: 40px;
     font-size: 1.5em;
-    background-color: #ffdfe1;
     -webkit-transition: background-color .4s ease;
     transition: background-color .4s ease;
-    color: #dd0000;
+    color: pink;
+    background-color: rgba(255, 139, 139, 0.9);
   }
-  .toggle:hover {
-    background: #ffd4db;
-  }
-  #nav-checkbox:checked + label .nav li {
-    opacity: 1;
-    visibility: visible;
-    -webkit-transition: all 1s ease-in;
-    transition: all 1s ease-in;
-  }
-  #bars {
-    -webkit-transition: -webkit-transform .65s ease;
-    transition: -webkit-transform .65s ease;
-    transition: transform .65s ease;
-    transition: transform .65s ease, -webkit-transform .65s ease;
-    max-width: 50px;
-    color: #dd0000;
-  }
-  #nav-checkbox:checked + label #bars {
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
-  }
-  #nav-checkbox + label .nav li {
-    opacity: 0;
-    -webkit-transition: visibility .5s ease, opacity .3s ease;
-    transition: visibility .5s ease, opacity .3s ease;
-    visibility: none;
-  }
-  #nav-checkbox:checked + label .nav {
-    height: 230px;
-  }
-  .menu {
-    border-radius: 0px;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    height: 0px;
-    -webkit-transition: height .4s ease-out;
-    transition: height .4s ease-out;
-  }
-  .menu li {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-item-align: center;
-        align-self: center;
-    width: 95%;
-    opacity: 0;
-    visibility: hidden;
-  }
-  .menu li a {
-    width: 95%;
-    text-align: center;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-    -ms-flex-line-pack: center;
-        align-content: center;
+  nav .toggle #bars {
+    width: 30px;
+    margin: 0 auto;
+    color: pink;
   }
 }
 
@@ -671,11 +724,6 @@ h4 {
   .margin-bottom {
     margin: 30px 0 15px;
   }
-}
-
-.sticky {
-  position: fixed;
-  top: 0;
 }
 
 .bold {

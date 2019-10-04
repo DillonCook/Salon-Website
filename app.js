@@ -40,3 +40,17 @@ function stickyNav() {
     navbar.classList.remove("sticky");
   }
 }
+
+// ======================================== Menu toggle ================================
+const toggle = document.querySelector('.toggle');
+const menu = document.querySelector('.nav');
+
+toggle.addEventListener('click', () => {
+if (menu.classList[1] == "menu-show") {
+  menu.classList.remove('menu-show');
+  menu.classList.add('menu-hide');
+} else if (menu.classList[1] == "menu-hide") {
+  menu.classList.remove('menu-hide');
+  menu.classList.add('menu-show');
+}
+})
