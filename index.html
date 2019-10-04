@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Open+Sans+Condensed:300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="scss/index.css">
+    <link rel="stylesheet" href="slidein.css">
 </head>
 <body>
         <div class="section-1" id="top">
@@ -18,7 +19,7 @@
                     <input type="checkbox" id="nav-checkbox">
                     <label for="nav-checkbox">
                     <ul class="menu nav">
-                        <li><a class="current" href="index.html">Home</a></li>
+                        <li><a class="current" href="index.html#top">Home</a></li>
                         <li><a href="gallery.html">Gallery</a></li> 
                         <li><a href="#estimates">Pricing</a></li> 
                         <li><a href="#reviews">Experience</a></li> 
@@ -30,7 +31,6 @@
             </header>
             <div class="profile-picture">
                 <img class="katie-profile" src="images/katie-profile.JPG" alt="picture of Katie Cook">
-                <!-- <h2>Master Designer <br> SALON at JCPenney</h2> -->
             </div>
             <div class="first-arrow"><i class="fa fa-angle-double-down"></i></div>
         </div>
@@ -39,7 +39,7 @@
         
         <div class="section-2">
             
-            <div class="div-cards">
+            <div class="div-cards js-slidein">
                 <a href="gallery.html" class="gallery"><h1>Gallery</h1></a>
                 <div class="snapwidget">
                     <!-- SnapWidget -->
@@ -47,7 +47,7 @@
                 </div>
             </div>
            
-            <div class="div-cards">
+            <div class="div-cards js-slidein">
                 <h1 class="">About Me</h1>
                 <p>I'm Katie, When I was about 8 years old I decided I was going to be a hairstylist. By the time I was 12, I was cutting the hair of everyone in my family.  While I've been behind the chair for several years now, I never want to stop learning and growing. </p>
                 <br>
@@ -56,7 +56,7 @@
         </div>
 
         <div class="section-4">
-                <div class="div-cards">
+                <div class="div-cards js-slidein">
                     <h1 id="estimates">Pricing</h1>
                     <ul>
                         <li>Haircut and Blow dry - $42</li>
@@ -69,9 +69,11 @@
                     <h5>Hair coloring prices vary. If you would like an exact price, please come in for a free consultation.</h5>
                 </div>
         </div>
-        <h1 id="reviews">Reviews</h1>
-        
-        <div class="elfsight-app-c67cb5ba-639e-44d5-ae75-281304ad7776 facebook-reviews"></div>
+        <div class="review-container js-slidein">
+            <h1 id="reviews">Reviews</h1>
+            
+            <div class="elfsight-app-c67cb5ba-639e-44d5-ae75-281304ad7776 facebook-reviews"></div>
+        </div>
     </main>
 
     <footer>
@@ -93,7 +95,7 @@
             </div>
 
             <div>
-                <h3 class="margin-bottom-10">Contact</h3>
+                <h3 class="margin-bottom">Contact</h3>
                 <div class="row">
                     <a class="icon-png" href="mailto:karore2015@gmail.com" target="_blank"><img src="images/icons8_gmail_96px.png" alt="email icon" ></a>
                     <a class="call-me-button icon-png" href="tel:8137517193"> <img src="images/icons8_phone_96px.png" alt="icon of a phone" ></a>
@@ -101,7 +103,7 @@
             </div>
     
             <div>
-                <h3 class="margin-bottom-10">Find me on Social Media</h3>
+                <h3 class="margin-bottom">Find me on Social Media</h3>
                 <div class="row">
                     <a class="icon-png" href="https://www.facebook.com/KC-Hairdesign-177569139678961/?eid=ARCS8FNt_TvB5Sr5QvXgdYeKc9QfCZhu2_hZzal4O6_jHIfjPtv9nBBKI9hWHaFYfUrQNiUB6HrgVHHY&timeline_context_item_type=intro_card_work&timeline_context_item_source=100011655079399&fref=tag" target="_blank"><img src="images/icons8_facebook_96px_1.png" alt="facebook icon" ></a>
                     <a class="icon-png" href="https://www.instagram.com/kchairdesigns/" target="_blank"><img src="images/icons8_instagram_new_96px.png" alt="instagram icon" ></a>
@@ -119,7 +121,8 @@
         src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
         crossorigin="anonymous">
-    </script>    
+    </script>
+    <script src="slideIn.min.js"></script>
     <script src="https://snapwidget.com/js/snapwidget.js"></script>
     <script src="https://apps.elfsight.com/p/platform.js" defer></script>
     <script src="app.js"></script>
