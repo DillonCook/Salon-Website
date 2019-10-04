@@ -1,6 +1,6 @@
 .js-slidein {
   opacity: 0;
-  transform: translateY(150px);
+  transform: translateY(100px);
   -webkit-transition: all 400ms ease-in-out;
   transition: all 400ms ease-in-out;
 }
