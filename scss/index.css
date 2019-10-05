@@ -459,8 +459,8 @@ footer .footer-wrapper {
             transform: translateY(0);
   }
   100% {
-    -webkit-transform: translateY(350px);
-            transform: translateY(350px);
+    -webkit-transform: translateY(-350px);
+            transform: translateY(-350px);
   }
 }
 
@@ -470,8 +470,8 @@ footer .footer-wrapper {
             transform: translateY(0);
   }
   100% {
-    -webkit-transform: translateY(350px);
-            transform: translateY(350px);
+    -webkit-transform: translateY(-350px);
+            transform: translateY(-350px);
   }
 }
 
@@ -495,7 +495,12 @@ nav {
 @media (max-width: 550px) {
   .sticky .toggle {
     width: 60px;
+    height: 20px;
     border-radius: 0 0 10px 10px;
+  }
+  .sticky .toggle #bars {
+    font-size: .75em;
+    margin-top: -10px;
   }
 }
 
@@ -536,7 +541,8 @@ nav {
     display: flex;
     -ms-flex-pack: distribute;
         justify-content: space-around;
-    width: 95%;
+    width: 85%;
+    max-width: 700px;
     padding: 0;
     margin: 0 auto;
     max-width: 800px;
@@ -555,7 +561,17 @@ nav {
     text-shadow: 0 2px 3px black;
     margin-right: 5px;
     color: white;
+    font-size: 1.2em;
   }
+}
+
+@media (min-width: 551px) and (min-width: 850px) {
+  nav .nav a {
+    font-size: 1.5em;
+  }
+}
+
+@media (min-width: 551px) {
   nav .nav .container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -577,7 +593,7 @@ nav {
             flex-direction: column;
     padding: 0;
     margin: 0;
-    background-color: rgba(252, 252, 252, 0.95);
+    background-color: rgba(247, 247, 247, 0.95);
     visibility: hidden;
     height: 0;
     -webkit-transition: all .4s ease;
@@ -609,7 +625,7 @@ nav {
             flex-direction: column;
     padding: 0;
     margin: 0;
-    background-color: rgba(252, 252, 252, 0.95);
+    background-color: rgba(247, 247, 247, 0.95);
     visibility: visible;
     height: 230px;
     -webkit-transition: height .4s ease, visibility .5s ease;

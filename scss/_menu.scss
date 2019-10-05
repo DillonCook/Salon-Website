@@ -17,7 +17,12 @@ nav {
     @media (max-width: 550px) {
         .toggle {
             width: 60px;
+            height: 20px;
             border-radius: 0 0 10px 10px;
+            #bars {
+                font-size: .75em;
+                margin-top: -10px;
+            }
         }
     }
 
@@ -53,7 +58,8 @@ nav {
         .nav {
             @include flex-row;
             justify-content: space-around;
-            width: 95%;
+            width: 85%;
+            max-width: 700px;
             padding: 0;
             margin: 0 auto;
             max-width: 800px;
@@ -68,6 +74,10 @@ nav {
                 text-shadow: 0 2px 3px rgb(0, 0, 0);
                 margin-right: 5px;
                 color: white;
+                font-size: 1.2em;
+                @include lg-screens {
+                    font-size: 1.5em;
+                }
             }
             
             .container {

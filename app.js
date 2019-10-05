@@ -18,7 +18,7 @@ $(window).scroll(() => {
   let verticalScroll = $(this).scrollTop();
   
   $('.katie-profile').css({
-    'transform': 'translate(0px, ' + verticalScroll / 7.5 +'%)'
+    'transform': 'translate(0px, ' + verticalScroll / 8.5 +'%)'
   });
 
 });
