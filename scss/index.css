@@ -492,6 +492,14 @@ nav {
   margin-top: 0;
 }
 
+@media (max-width: 550px) {
+  .sticky .toggle {
+    width: 60px;
+    border-radius: 15px;
+    margin-right: 100%;
+  }
+}
+
 @media (min-width: 551px) {
   .sticky a {
     background-color: rgba(0, 0, 0, 0.35);
@@ -512,7 +520,7 @@ nav {
   padding: 10px 15px;
   -webkit-transition: color .4s ease, background-color .4s ease;
   transition: color .4s ease, background-color .4s ease;
-  color: #f7f7f7;
+  color: #fa6d84;
   cursor: pointer;
 }
 
@@ -570,7 +578,7 @@ nav {
             flex-direction: column;
     padding: 0;
     margin: 0;
-    background-color: rgba(255, 160, 160, 0.85);
+    background-color: rgba(252, 252, 252, 0.95);
     visibility: hidden;
     height: 0;
     -webkit-transition: all .4s ease;
@@ -601,7 +609,7 @@ nav {
             flex-direction: column;
     padding: 0;
     margin: 0;
-    background-color: rgba(255, 160, 160, 0.85);
+    background-color: rgba(252, 252, 252, 0.95);
     visibility: visible;
     height: 230px;
     -webkit-transition: height .4s ease, visibility .5s ease;
@@ -635,13 +643,13 @@ nav {
     font-size: 1.5em;
     -webkit-transition: background-color .4s ease;
     transition: background-color .4s ease;
-    color: pink;
-    background-color: rgba(255, 139, 139, 0.9);
+    color: #fa6d84;
+    background-color: rgba(255, 200, 204, 0.9);
   }
   nav .toggle #bars {
     width: 30px;
     margin: 0 auto;
-    color: pink;
+    color: #fa6d84;
   }
 }
 
@@ -690,10 +698,17 @@ body {
 }
 
 main {
-  background-image: url(../images/bloom-blossom.jpg);
+  background-image: url(../images/bloom-blossom-mobile.jpg);
   background-attachment: fixed;
   background-size: cover;
-  background-position: right;
+  background-position: center;
+}
+
+@media (min-width: 850px) {
+  main {
+    background-image: url(../images/bloom-blossom.jpg);
+    background-position: right;
+  }
 }
 
 h1,
