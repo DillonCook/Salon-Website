@@ -14,12 +14,14 @@ body {
 
 main {
     background-image: url(../images/bloom-blossom-mobile.jpg);
-    background-attachment: fixed;
-    background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
     @include lg-screens {
         background-image: url(../images/bloom-blossom.jpg);
         background-position: right;
+        background-attachment: fixed;
     }
 }
 // Header styles

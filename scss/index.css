@@ -495,8 +495,7 @@ nav {
 @media (max-width: 550px) {
   .sticky .toggle {
     width: 60px;
-    border-radius: 15px;
-    margin-right: 100%;
+    border-radius: 0 0 10px 10px;
   }
 }
 
@@ -520,7 +519,6 @@ nav {
   padding: 10px 15px;
   -webkit-transition: color .4s ease, background-color .4s ease;
   transition: color .4s ease, background-color .4s ease;
-  color: #fa6d84;
   cursor: pointer;
 }
 
@@ -556,6 +554,7 @@ nav {
   nav .nav a {
     text-shadow: 0 2px 3px black;
     margin-right: 5px;
+    color: white;
   }
   nav .nav .container {
     display: -webkit-box;
@@ -590,6 +589,7 @@ nav {
     font-size: 1.3em;
     -webkit-animation: exit .4s ease-in 1;
             animation: exit .4s ease-in 1;
+    color: #fa6d84;
   }
   nav .menu-show + .toggle > #bars {
     -webkit-transition: -webkit-transform .5s ease;
@@ -621,6 +621,7 @@ nav {
     font-size: 1.3em;
     -webkit-animation: entrance .4s ease 1;
             animation: entrance .4s ease 1;
+    color: #fa6d84;
   }
   nav .menu-hide + .toggle > #bars {
     -webkit-transition: -webkit-transform .5s ease;
@@ -641,8 +642,8 @@ nav {
     padding: 10px 0;
     height: 40px;
     font-size: 1.5em;
-    -webkit-transition: background-color .4s ease;
-    transition: background-color .4s ease;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
     color: #fa6d84;
     background-color: rgba(255, 200, 204, 0.9);
   }
@@ -699,15 +700,17 @@ body {
 
 main {
   background-image: url(../images/bloom-blossom-mobile.jpg);
-  background-attachment: fixed;
-  background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 @media (min-width: 850px) {
   main {
     background-image: url(../images/bloom-blossom.jpg);
     background-position: right;
+    background-attachment: fixed;
   }
 }
 

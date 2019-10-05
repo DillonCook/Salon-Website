@@ -14,12 +14,10 @@ nav {
     position: fixed;
     top: 0;
     margin-top: 0;
-
     @media (max-width: 550px) {
         .toggle {
             width: 60px;
-            border-radius: 15px;
-            margin-right: 100%;
+            border-radius: 0 0 10px 10px;
         }
     }
 
@@ -42,7 +40,6 @@ nav {
     font-weight: 600;
     padding: 10px 15px;
     transition: color .4s ease, background-color .4s ease;
-    color: $pink;
     cursor: pointer;
 }
 
@@ -70,6 +67,7 @@ nav {
             a {                
                 text-shadow: 0 2px 3px rgb(0, 0, 0);
                 margin-right: 5px;
+                color: white;
             }
             
             .container {
@@ -98,6 +96,7 @@ nav {
                 text-decoration: none;
                 font-size: 1.3em;
                 animation: exit .4s ease-in 1;
+                color: $pink;
             }
             
             & + .toggle > #bars {
@@ -119,7 +118,7 @@ nav {
                 text-decoration: none;
                 font-size: 1.3em;
                 animation: entrance .4s ease 1;
-
+                color: $pink;
             }
         
             & + .toggle > #bars {
@@ -138,7 +137,7 @@ nav {
             padding: 10px 0;
             height: 40px;
             font-size: 1.5em;
-            transition: background-color .4s ease;
+            transition: all .3s ease;
             color: $pink;
             background-color: $toggle-pink;
             #bars {
