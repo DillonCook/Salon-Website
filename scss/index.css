@@ -714,14 +714,6 @@ body {
   text-align: center;
 }
 
-main {
-  background-image: url(../images/bloom-blossom-mobile.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-}
-
 main .main-container {
   background-position-y: 100%;
   padding-bottom: 50px;
@@ -739,6 +731,7 @@ main .main-container {
     left: 0;
     background-image: url(../images/bloom-blossom-mobile.jpg);
     background-size: cover;
+    background-position: center;
     background-color: lightgray;
   }
 }

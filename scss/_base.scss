@@ -28,6 +28,7 @@ main {
                 left: 0;
                 background-image: url(../images/bloom-blossom-mobile.jpg);
                 background-size: cover;
+                background-position: center;
                 background-color: lightgray;
             }
         }
@@ -40,12 +41,6 @@ main {
             background-repeat: no-repeat;
         }
     }
-    background-image: url(../images/bloom-blossom-mobile.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    
 }
 // Header styles
 h1,
