@@ -66,6 +66,11 @@
 }
 
 // Media Query
+@mixin sm-screens-only {
+    @media (max-width: 849px) {
+        @content;
+    }
+}
 @mixin  md-screens {
     @media(min-width: 700px){
         @content;

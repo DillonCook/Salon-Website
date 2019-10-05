@@ -13,16 +13,39 @@ body {
 }
 
 main {
+    .main-container {
+        background-position-y: 100%;
+        padding-bottom: 50px;
+        position: relative;
+        &::before {
+            @include sm-screens-only {
+                content: "";
+                z-index: -1;
+                position: fixed;
+                top: 0;
+                right: 0;
+                bottom: -15%;
+                left: 0;
+                background-image: url(../images/bloom-blossom-mobile.jpg);
+                background-size: cover;
+                background-color: lightgray;
+            }
+        }
+        @include lg-screens {
+            background-image: url(../images/bloom-blossom.jpg);
+            background-position: right;
+            background-attachment: fixed;
+            background-size: cover;
+            background-color: lightgray;
+            background-repeat: no-repeat;
+        }
+    }
     background-image: url(../images/bloom-blossom-mobile.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    @include lg-screens {
-        background-image: url(../images/bloom-blossom.jpg);
-        background-position: right;
-        background-attachment: fixed;
-    }
+    
 }
 // Header styles
 h1,

@@ -722,11 +722,35 @@ main {
   background-attachment: fixed;
 }
 
+main .main-container {
+  background-position-y: 100%;
+  padding-bottom: 50px;
+  position: relative;
+}
+
+@media (max-width: 849px) {
+  main .main-container::before {
+    content: "";
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: -15%;
+    left: 0;
+    background-image: url(../images/bloom-blossom-mobile.jpg);
+    background-size: cover;
+    background-color: lightgray;
+  }
+}
+
 @media (min-width: 850px) {
-  main {
+  main .main-container {
     background-image: url(../images/bloom-blossom.jpg);
     background-position: right;
     background-attachment: fixed;
+    background-size: cover;
+    background-color: lightgray;
+    background-repeat: no-repeat;
   }
 }
 
