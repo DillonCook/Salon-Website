@@ -628,8 +628,8 @@ nav {
     background-color: rgba(247, 247, 247, 0.95);
     visibility: visible;
     height: 230px;
-    -webkit-transition: height .4s ease, visibility .5s ease;
-    transition: height .4s ease, visibility .5s ease;
+    -webkit-transition: height .4s ease, visibility .4s ease;
+    transition: height .4s ease, visibility .4s ease;
     overflow: hidden;
   }
   nav .menu-hide a {
@@ -640,10 +640,10 @@ nav {
     color: #fa6d84;
   }
   nav .menu-hide + .toggle > #bars {
-    -webkit-transition: -webkit-transform .5s ease;
-    transition: -webkit-transform .5s ease;
-    transition: transform .5s ease;
-    transition: transform .5s ease, -webkit-transform .5s ease;
+    -webkit-transition: -webkit-transform .4s ease;
+    transition: -webkit-transform .4s ease;
+    transition: transform .4s ease;
+    transition: transform .4s ease, -webkit-transform .4s ease;
     -webkit-transform: rotate(90deg);
             transform: rotate(90deg);
   }

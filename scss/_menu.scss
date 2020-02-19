@@ -122,7 +122,7 @@ nav {
             background-color: $background-white;
             visibility: visible;
             height: 230px;
-            transition: height .4s ease, visibility .5s ease;
+            transition: height .4s ease, visibility .4s ease;
             overflow: hidden;
             a {
                 text-decoration: none;
@@ -132,7 +132,7 @@ nav {
             }
         
             & + .toggle > #bars {
-                transition: transform .5s ease;
+                transition: transform .4s ease;
                 transform: rotate(90deg);
             }
         }
