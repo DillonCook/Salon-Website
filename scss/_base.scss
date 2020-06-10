@@ -26,15 +26,14 @@ main {
                 right: 0;
                 bottom: -15%;
                 left: 0;
-                background-image: url(../images/bloom-blossom-mobile.jpg);
+                background-image: url(../images/rose-background.jpg);
                 background-size: cover;
                 background-position: center;
                 background-color: lightgray;
             }
         }
         @include lg-screens {
-            background-image: url(../images/bloom-blossom.jpg);
-            background-position: right;
+            background-image: url(../images/rose-background.jpg);
             background-attachment: fixed;
             background-size: cover;
             background-color: lightgray;
@@ -106,7 +105,7 @@ h4 {
     }
     .div-cards:nth-child(2) {
         margin-top: 100px;
-        background-color: rgba(251, 251, 251, .8);
+        background-color: rgba(251, 251, 251, .85);
         width: 100%;
         padding: 30px 0;
         h1 {
@@ -117,7 +116,12 @@ h4 {
             max-width: 900px;
             line-height: 1.5;
         }
+        @include md-screens {
+            width: 70%;
+            border-radius: 20px;
+        }
     }
+    
     @include lg-screens {
         .div-cards {
             h1 {
@@ -136,7 +140,7 @@ h4 {
         margin: 0 0 20px;
     }
     .div-cards {
-        background-color: rgba(251, 251, 251, .8);
+        background-color: rgba(251, 251, 251, .85);
         width: 100%;
         margin: 50px auto;
         padding: 30px 0;
@@ -151,6 +155,10 @@ h4 {
             font-size: 1em;
             padding: 5px 0;
         }
+        @include md-screens {
+            width: 70%;
+            border-radius: 20px;
+        }
     }
     @include lg-screens {
         .div-cards {
@@ -164,7 +172,12 @@ h4 {
     }
     @include xlg-screens {
     }
-    
+}
+
+.div-cards {
+    @include md-screens {
+        width: 45%;
+    }
 }
 
 // ------------------------------------- ARROWS ---------------------------------------
@@ -228,7 +241,11 @@ i:hover {
     margin-top: 50px;
     padding: 30px 0;
     width: 100%;
-    background-color: rgba(251, 251, 251, .8);
+    background-color: rgba(251, 251, 251, .85);
+    @include md-screens {
+        width: 70%;
+        border-radius: 20px;
+    }
 }
 
 #reviews {
@@ -264,6 +281,9 @@ footer {
             padding: 0 0 25px;
             p {
                 padding: 2px 0;
+                @include md-screens {
+                    font-size: 20px;
+                }
             }
         }
         #location {
@@ -325,7 +345,7 @@ footer {
         color: rgb(240, 248, 255);
         background-color: rgb(128, 128, 128);
         text-shadow: none;
-        padding: 5px 0;
+        padding: 2.5px 0;
     }
     #footer-arrow {
         font-size: 2.5em;

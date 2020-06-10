@@ -54,3 +54,29 @@ if (menu.classList[1] == "menu-show") {
   menu.classList.add('menu-show');
 }
 })
+
+//Smooth Scroll down on menu click
+
+$('#nav-home').click(() => {
+  $('html, body').animate({
+      scrollTop: $('#top').offset().top
+  }, 500);
+});
+
+$('#nav-pricing').click(() => {
+  $('html, body').animate({
+      scrollTop: $('#pricing').offset().top
+  }, 500);
+});
+
+$('#nav-reviews').click(() => {
+  $('html, body').animate({
+      scrollTop: $('#reviews').offset().top
+  }, 500);
+});
+
+$('#nav-contact').click(() => {
+  $('html, body').animate({
+      scrollTop: $('#hours').offset().top
+  }, 500);
+});
