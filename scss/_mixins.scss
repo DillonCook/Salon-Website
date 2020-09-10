@@ -66,6 +66,11 @@
 }
 
 // Media Query
+@mixin super-small-only {
+    @media (max-width: 420px) {
+        @content;
+    }
+}
 @mixin sm-screens-only {
     @media (max-width: 849px) {
         @content;
